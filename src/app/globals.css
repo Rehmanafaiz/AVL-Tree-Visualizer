@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif; */
+  /* This line is removed to allow Tailwind's font-sans class to take full effect based on tailwind.config.ts */
+}
+
+@layer base {
+  :root {
+    --background: 125 30% 94.3%; /* Light Sage */
+    --foreground: 123 25% 20%; /* Dark Green-ish Text */
+
+    --card: 125 30% 97%; /* Lighter Sage */
+    --card-foreground: 123 25% 20%;
+
+    --popover: 125 30% 97%;
+    --popover-foreground: 123 25% 20%;
+
+    --primary: 123 44% 38.4%; /* Forest Green */
+    --primary-foreground: 125 30% 98%; /* Light text for primary */
+
+    --secondary: 123 30% 88%; /* Lighter Green */
+    --secondary-foreground: 123 25% 20%;
+
+    --muted: 123 30% 90%;
+    --muted-foreground: 123 25% 35%;
+
+    --accent: 50 98% 60.4%; /* Golden Yellow */
+    --accent-foreground: 48 90% 25%; /* Dark text for accent */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 123 30% 80%;
+    --input: 123 30% 85%;
+    --ring: 50 98% 60.4%; /* Accent for focus ring */
+
+    --chart-1: 123 44% 38.4%; /* Primary */
+    --chart-2: 50 98% 60.4%; /* Accent */
+    --chart-3: 200 50% 50%; 
+    --chart-4: 30 80% 55%;
+    --chart-5: 280 65% 60%;
+    
+    --radius: 0.5rem;
+
+    /* Sidebar specific colors - can be kept as default or adjusted if sidebar is used extensively */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* For dark mode, we can invert or use a darker palette.
+       This is a basic inversion, might need refinement for optimal aesthetics. */
+    --background: 123 25% 10%; 
+    --foreground: 125 30% 90%;
+
+    --card: 123 25% 15%;
+    --card-foreground: 125 30% 90%;
+
+    --popover: 123 25% 15%;
+    --popover-foreground: 125 30% 90%;
+
+    --primary: 123 44% 45%; /* Slightly lighter Forest Green */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 123 30% 25%;
+    --secondary-foreground: 125 30% 90%;
+
+    --muted: 123 30% 22%;
+    --muted-foreground: 125 30% 70%;
+
+    --accent: 50 98% 55%; /* Slightly darker Golden Yellow */
+    --accent-foreground: 48 90% 15%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 123 30% 30%;
+    --input: 123 30% 28%;
+    --ring: 50 98% 55%;
+
+    --chart-1: 123 44% 45%;
+    --chart-2: 50 98% 55%;
+    --chart-3: 200 50% 55%;
+    --chart-4: 30 80% 60%;
+    --chart-5: 280 65% 65%;
+
+    /* Dark Sidebar colors */
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
